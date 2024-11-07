@@ -36,6 +36,7 @@ header {
 .feed-card {
     height: 545px;
     width: 375px;
+    padding-bottom: 5px
     margin-bottom: 25px;
     background-color: #FFFFFF;
 }
@@ -83,7 +84,6 @@ header {
 .post-likes,
 .post-desc {
     margin-left: 13px;
-    margin-bottom: 5px
     overflow: hidden;
     text-overflow: ellipsis;
     width: 360px;
