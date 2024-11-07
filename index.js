@@ -28,6 +28,14 @@ const posts = [
     }
 ]
 
+// Check if there are saved likes in localStorage and load them
+const savedLikes = JSON.parse(localStorage.getItem("postLikes")) || {}
+posts.forEach((post, index) => {
+    if (savedLikes[index] !== undefined) {
+        post.likes = savedLikes[index]
+    }
+})
+
 // RENDERS 'posts' into the FEED ELEMENT and creates unique IDs for each "like" icon
 
 posts.forEach((post, index) => {
@@ -71,5 +79,9 @@ posts.forEach((post, index) => {
         // Increments the likes in the data and updates the DOM
         post.likes++
         likeNum.textContent = `${post.likes} likes`
-    });
-});
+        
+        // Save the updated likes count to localStorage
+        savedLikes[index] = post.likes
+        localStorage.setItem("postLikes", JSON.stringify(savedLikes))
+    })
+})
