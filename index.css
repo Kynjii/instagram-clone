@@ -38,6 +38,7 @@ header {
     width: 375px;
     margin-bottom: 25px;
     background-color: #FFFFFF;
+    border-radius: 2px;
 }
 
 .feed-card-header {
@@ -87,6 +88,7 @@ header {
     text-overflow: ellipsis;
     width: 360px;
     white-space: nowrap;
+    display: block;
 }
 
 .post-likes {
