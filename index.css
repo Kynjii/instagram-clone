@@ -83,6 +83,7 @@ header {
 .post-likes,
 .post-desc {
     margin-left: 13px;
+    margin-bottom: 5px
     overflow: hidden;
     text-overflow: ellipsis;
     width: 360px;
